@@ -18,7 +18,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${DATABASE_PW}
       MYSQL_DATABASE: todo
     ports:
-      - '${MYSQL_PORT}:${MYSQL_INNTER_PORT}'
+      - '${MYSQL_PORT}:${MYSQL_INNER_PORT}'
     volumes:
       - mysql-data:/var/lib/mysql
 
