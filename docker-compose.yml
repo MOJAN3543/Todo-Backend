@@ -2,10 +2,10 @@ version: '3.8'
 services:
   back:
     build:
-      context: "./"
+      context: './'
     container_name: todoBackend
     ports:
-      - "${BACKEND_PORT}:${BACKEND_INNER_PORT}"
+      - '${BACKEND_PORT}:${BACKEND_INNER_PORT}'
     environment:
       DATABASE_URL: ${DATABASE_URL}
     depends_on:
@@ -18,9 +18,9 @@ services:
       MYSQL_ROOT_PASSWORD: ${DATABASE_PW}
       MYSQL_DATABASE: todo
     ports:
-      - "${MYSQL_PORT}:${MYSQL_PORT}"
+      - '${MYSQL_PORT}:${MYSQL_INNTER_PORT}'
     volumes:
       - mysql-data:/var/lib/mysql
-  
+
 volumes:
   mysql-data:
